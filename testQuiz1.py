@@ -1,7 +1,15 @@
 import unittest
-# from quiz1 import HiLo
-from quiz1 import Hangman   # I keep getting errors from tihs line, I attempted changing it to import Hangman
-#from quiz1 with same results.  I think this is trying to get info from the quiz1.py but can't find it, not sure why.
+from quiz1 import HiLo      # errors??  Why?  Hilo has a class defined in quiz1, not sure why.
+from quiz1 import Hangman   # I keep getting errors from these lines, I attempted changing it to import Hangman
+#from quiz1 with same results.  I think this is trying to get info from the quiz1.py but can't find it there, not sure why.
+
+class MyTestCase(unittest.TestCase):
+    def setUp(self) -> None:
+        self.game = HiLo()
+    def test_game(self):
+        self.assertTrue(self.game.guess(0) == -1, f"the game returns {self.game.guess(0)}")
+        self.assertTrue(self.game.guess(1) == 0, f"the game returns {self.game.guess(1)}")
+        self.assertTrue(self.game.guess(2) == 1, f"the game returns {self.game.guess(2)}")
 
 # The Hangman class is a game of hangman where you create an instance by
 # giving it the word to guess.  i.e. self.game = Hangman("Apple")

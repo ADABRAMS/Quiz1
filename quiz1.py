@@ -59,9 +59,10 @@ class Hangman():
             'sorry, that is incorrect')  # this intended to provide a statement to the user that the letter they have chosen (anything other than
         pass
 
-    if guess(letter != ([A, l, a, p, e])):
+        self.guess(self.letter != ([A, l, a, p, e]))
         print(self.turns == (-1))
         pass
 
-    # I can't seem to make this pass.  As is my pattern regarding python, I ended spending hours just
-    # making a mess of the whole thing.  It appears I'm much better at breaking things then creating them.
+# I was unable make this pass.  As is my pattern regarding python, I ended spending hours just
+# making a mess of the whole thing.  It appears I'm much better at breaking things then creating them.
+## at this point, when I attempt to run, it doesn't return any lists of errors, just Process finished with exit code 0
